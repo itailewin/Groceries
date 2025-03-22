@@ -1,0 +1,67 @@
+@font-face {
+  font-family: dana;
+  src:  url('/fonts/DanaYadAlefAlefAlef-Normal.woff') format('woff');
+ }
+:root {
+  font-family: 'dana', sans-serif;
+  line-height: 1.5;
+  
+  direction: rtl;
+}
+
+html {
+  font-family: 'dana', sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+} 
+
+body {
+  font-family: dana;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #2e688a;
+}
+
+#app {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0.2rem;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 2.5rem;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+input {
+  
+  width: 100%;
+  padding: 0.5rem;
+  /*margin: 0.25rem 0;*/
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-family: 'dana', sans-serif;
+  font-weight: 1000;
+  text-align: center;
+  font-size: xx-large;
+}
+
+.selected {
+  background-color: #ac1a1a;
+}
