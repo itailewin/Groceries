@@ -1,5 +1,4 @@
-<    import type { RealtimePostgresChangesPayload } from '@supabase/supabase-js';
-script lang="ts">
+<script lang="ts">
   import { onMount } from 'svelte';
   import { supabase } from './lib/supabase';
   import type { GroceryItem } from './lib/types';
@@ -47,7 +46,7 @@ onMount(async () => {
 });
 
 // Function to update items based on Supabase changes
-function updateItems(payload: RealtimePostgresChangesPayload<{ [key: string]: any; }>) {
+function updateItems(payload) {
   if (payload.eventType === 'INSERT') {
     items = [...items, payload.new];
   } else if (payload.eventType === 'UPDATE') {
@@ -157,7 +156,7 @@ function updateItems(payload: RealtimePostgresChangesPayload<{ [key: string]: an
               }
             }
           },
-          labels: {
+/*           labels: {
             sign_in: {
               email_label: 'כתובת דואר אלקטרוני',
               password_label: 'סיסמה',
@@ -174,7 +173,7 @@ function updateItems(payload: RealtimePostgresChangesPayload<{ [key: string]: an
               social_provider_text: 'הרשם באמצעות',
               link_text: 'אין לך חשבון? הרשם'
             }
-          }
+          } */
         }}
         localization={{
           variables: {
