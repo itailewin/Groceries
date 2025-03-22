@@ -1,4 +1,5 @@
-<script lang="ts">
+<    import type { RealtimePostgresChangesPayload } from '@supabase/supabase-js';
+script lang="ts">
   import { onMount } from 'svelte';
   import { supabase } from './lib/supabase';
   import type { GroceryItem } from './lib/types';
@@ -46,7 +47,7 @@ onMount(async () => {
 });
 
 // Function to update items based on Supabase changes
-function updateItems(payload) {
+function updateItems(payload: RealtimePostgresChangesPayload<{ [key: string]: any; }>) {
   if (payload.eventType === 'INSERT') {
     items = [...items, payload.new];
   } else if (payload.eventType === 'UPDATE') {
